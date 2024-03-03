@@ -1,0 +1,342 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html , body{
+    height: 100%;
+    width: 100%;
+}
+main{
+    height: 100%;
+    width: 100%;
+    background-color: #f8f7f4;
+    font-family: "Source Serif 4";
+}
+#page1{
+    height: 100vh;
+    width: 100%;
+}
+nav {
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2vw;
+}
+nav #part1{
+    display: flex;
+    gap: 1vw;
+
+    width: 30%;
+}
+nav #part1 h4{
+    font-size: 1.1vw;
+    font-weight: 500;
+    transition: all ease-in .5s;
+}
+nav #part1 h4:hover{
+      text-decoration: underline;
+      cursor: pointer;
+}
+nav #part2{
+    display: flex;
+    gap: 1.5vw; 
+    width: 30%;
+    justify-content: flex-end;
+}
+
+nav #part2 button{
+    padding: .6vw 1vw;
+    border-radius: 1.5vw;
+    font-size: 1.2vw;
+    border: none;
+    transition: all ease .3s;
+    background-color: #f3f3f3;
+}
+
+nav #part2 button:nth-child(2){
+    background-color: black;
+    padding: .8vw 1vw;
+    color: white;
+}
+nav #part2 button:hover{
+    scale: 0.95;
+    cursor: pointer;
+}
+#hero{
+    height: 90vh;
+}
+.content{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 2vw 0;
+    gap: 2vw;
+  
+    height: 50%;
+}
+.content h3{
+    font-size: 1.2vw;
+    background-color: #F2B0EA;
+    border-radius: 1vw;
+    padding: .3vw .8vw;
+}
+.content h1{
+    font-size: 3.8vw;
+
+    width: 50%;
+    text-align: center;
+    line-height: 3.8vw;
+    font-weight: 500;
+}
+.content h4{
+    font-weight: 500;
+}
+.content button{
+    padding: 1vw 1.2vw;
+    border-radius: 1.5vw;
+    border: none;
+    font-size: 1vw;
+    background-color: black;
+    color: white;
+    transition: all ease .4s;
+}
+.content button:hover{
+    cursor: pointer;
+    scale: 1.05;
+}
+#scroller{
+    width: 100%;
+    height: 50%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    display: flex;
+    padding: 1vw 2vw;
+   
+}
+.wrapper{
+    flex-shrink: 0;
+    height: 100%;
+    width: 200%;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 1.2vw;
+    animation-name: marquee;
+    animation-duration: 15s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#scroller .container {
+    flex-shrink: 0;
+    height: 100%;
+    width: 9.2%;
+    position: relative;
+    
+
+}
+.container img , video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 2.4vw;
+    
+}
+
+.container #text{
+    position: absolute;
+    z-index: 9;
+    top: 60%;
+    color: white;
+    padding: 1vw 1.2vw;
+   
+}
+.container h3{
+    font-weight: 400;
+    font-size: 1.3vw;
+}
+.container h4{
+    font-weight: 400;
+    font-size: 1.2vw;
+}
+.container #tags{
+    display: flex;
+    margin-top: 1.2vw;
+    gap: .8vw;
+}
+.container #tags h5{
+    padding: .2vw .9vw;
+    height: fit-content;
+    border: 1px solid #dadada;
+    border-radius: 1vw;
+    font-weight: 300;
+}
+.wrapper > .container:nth-child(6) h5 {
+   text-wrap: nowrap;
+   padding:.2vw  .5vw;
+   font-size: .9vw;
+}
+@keyframes marquee{
+    from{
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(calc(-100%  ) );
+    }
+}
+#page2{
+    height: 150%;
+    width: 100%;
+     padding: 3vw 3vw;
+     position: relative;
+     display: flex;
+     flex-direction: column;
+     gap: 1vw;
+}
+#page2 h1{
+    text-align: center;
+    font-size: 2.5vw;
+    font-weight: 400;
+    font-family: "Poppins";
+}
+.gcontainer{
+    height: 90%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 23% 23% 23% 23%;
+    grid-template-rows: 30% 30% 30% 30%;
+    padding: 2vw 3vw;
+    gap: 2vw;
+}
+#page2 .gitem{
+    position: relative;
+    overflow: hidden;
+    border-radius: 1.5vw;
+    transition: all ease .5s;
+    font-family: "Poppins";
+    cursor: pointer;
+}
+#page2 .gitem img,video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+#imageinfo{
+    height: 30%;
+    width: 100%;
+    color: white;
+    justify-content: space-between;
+    position: absolute;
+    bottom: -30%;
+    display: flex;
+    background: linear-gradient(transparent,rgba(0, 0, 0, 0.521));
+    padding: 1vw 1vw;
+    transition: all ease  0.5s;
+}
+.gitem:hover #imageinfo {
+              bottom: 0;
+              
+}
+.gitem:hover{
+    box-shadow: 0 2px 30px rgba(0, 0, 0, 0.568);
+}
+#imageinfo>h4{
+    font-size: 1.2vw;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+#imageinfo #icons{
+    display: flex;
+    gap: 1vw;
+}
+.gitem:nth-child(3) #imageinfo>h4 {
+    text-overflow: initial;
+    font-size: 1vw;
+    white-space: wrap;
+}
+#imageinfo #icons h4 i{
+    font-size: 1.5vw;
+    height: fit-content;
+    width: fit-content;
+    padding: .4vw .7vw;
+    background-color: white;
+    color: black;
+    border-radius: 1.9vw;
+}
+#page2 #browse{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#page2 #browse button{
+    padding: 1.1vw 1.7vw;
+    font-size: 1.1vw;
+    border-radius: 2vw;
+    background-color: white;
+    cursor: pointer;
+    transform: all ease 1s;
+}
+#page2 #browse button:hover{
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+}
+#page3{
+    height: 100%;
+    width: 100%;
+    background-color: #FFDA79;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 5vw 2vw;
+    gap: 3vw;
+}
+#page3 h1{
+     font-size: 5.2vw;
+     width: 38%;
+     line-height: 5.2vw;
+     font-weight: 400;
+     margin-top: 5vw;
+}
+#page3 h3{
+    font-size: 1.5vw;
+    width: 50%;
+    text-align: center;
+
+    font-weight: 400;
+    line-height: 2vw;
+}
+#page3 #buttons{
+    display: flex;
+    gap: 2vw;
+}
+#page3 #buttons button{
+    padding: 1.2vw 1.7vw;
+    font-weight: 400;
+    border-radius: 2vw;
+    font-size: 1.2vw;
+    border: none;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    transition: all ease .2s;
+}
+#page3 #buttons button:nth-child(2){
+    background-color: white;
+    color: black;
+}
+#page3 #buttons button:hover{
+    scale: .97;
+}
+#page3 h4{
+    font-size: 1.5vw;
+    font-weight: 400;
+}
+#page3 h4 span{
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: underline;
+}
