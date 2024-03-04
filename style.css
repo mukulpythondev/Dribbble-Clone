@@ -36,6 +36,9 @@ nav #part1 h4{
     font-weight: 500;
     transition: all ease-in .5s;
 }
+nav #part1 h5{
+    display: none;
+}
 nav #part1 h4:hover{
       text-decoration: underline;
       cursor: pointer;
@@ -339,4 +342,338 @@ nav #part2 button:hover{
     font-weight: 600;
     cursor: pointer;
     text-decoration: underline;
+}
+footer{
+    height: 30%;
+    width: 100%;
+    padding: 1vw 2vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+footer #upper{
+    display: flex;
+    padding: 0 5vw;
+    justify-content: space-between;
+}
+footer svg{
+    height: 5vh;
+    width: 10vw;
+}
+footer #centertext{
+    display: flex;
+    gap: 1.5vw;
+}
+#centertext h4{
+    font-size: 1.2vw;
+    font-weight: 500;
+}
+#upper #icons{
+    display: flex;
+    gap: 1.2vw;
+    font-size: 1.8vw;
+}
+#upper #icons i{
+    cursor: pointer;
+}
+footer #lower{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5vw;
+}
+footer #lower #righttext,#lefttext{
+    display: flex;
+    gap: 1.2vw;
+
+}
+footer #lower #righttext h4 ,#lefttext h4{
+    font-size: 1.2vw;
+    font-weight: 300;
+}
+@media (max-width:600px) {
+    nav {
+        height: 10vh;
+        padding: 0 3vw;
+
+        justify-content: flex-start;
+        gap: 4vw;
+    }
+    nav #part1 h5{
+        display: block;
+        font-size: 6vw;
+    }
+    nav #part1{
+        width: 10%;
+    }
+    nav #part1 h4{
+        display: none;
+    }
+    nav #part2{
+        display: flex;
+        gap: 2.5vw; 
+        width: 60%;
+    }
+    
+    nav #part2 button{
+        padding: 2vw 4vw;
+        border-radius: 4vw;
+        font-size: 4vw;
+    }
+    
+    nav #part2 button:nth-child(2){
+        padding: 2vw 4vw;
+    }
+    #hero{
+        height: 90vh;
+    }
+    .content{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 4vw 0;
+        gap: 5vw;
+        height: 50%;
+    }
+    .content h3{
+        font-size: 3.5vw;
+        background-color: #F2B0EA;
+        border-radius: 5vw;
+        padding: 2vw 3vw;
+    }
+    .content h1{
+        font-size: 8.8vw;
+        width: 80%;
+        line-height: 8.8vw;
+    }
+    .content h4{
+        width: 80%;
+        text-align: center;
+        font-weight: 500;
+    }
+    .content button{
+        padding: 4vw 5vw;
+        border-radius: 6.5vw;
+        font-size: 5vw;
+    }
+    #scroller{
+    height: 45%;   
+    }
+    .wrapper{
+        width: 700%;
+        gap: 5vw;
+        animation-duration: 25s;
+        
+    }
+    
+    .container img , video{
+        border-radius: 4.4vw;
+    }
+    
+    .container #text{
+        position: absolute;
+        z-index: 9;
+        top: 70%;
+        color: white;
+        padding: 1vw 2.2vw;
+       
+    }
+    .container h3{
+        font-size: 4.3vw;
+    }
+    .container h4{
+        font-size: 4vw;
+    }
+    .container #tags{
+        display: flex;
+        margin-top: 3.2vw;
+        gap: 2vw;
+    }
+    .container #tags h5{
+        padding: .5vw .5vw;
+        height: fit-content;
+        border: 1px solid #dadada;
+        border-radius: 1.5vw;
+        font-weight: 300;
+    }
+    .wrapper > .container:nth-child(6) h5 {
+       text-wrap: nowrap;
+       padding:1vw  1vw;
+       border-radius: 1vw;
+       font-size: 4vw;
+    }
+    #page2{
+        height: 500%;
+        width: 100%;
+         padding: 3vw 3vw;
+         position: relative;
+         display: flex;
+         flex-direction: column;
+         gap: 1vw;
+    }
+    #page2 h1{
+        text-align: center;
+        font-size: 5.5vw;
+        font-weight: 400;
+        font-family: "Poppins";
+    }
+    .gcontainer{
+        height: 200%;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 10% ;
+        padding: 2vw 3vw;
+        gap: 4vw;
+    }
+    #page2 .gitem{
+        position: relative;
+        overflow: hidden;
+        border-radius: 1.5vw;
+        transition: all ease .5s;
+        font-family: "Poppins";
+        cursor: pointer;
+    }
+    #page2 .gitem img,video{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+    #imageinfo{
+        height: 30%;
+        width: 100%;
+        bottom: -30%;
+        padding: 2vw 2vw;
+      
+    }
+   
+    #imageinfo>h4{
+        font-size: 6vw;
+    }
+    #imageinfo #icons{
+        gap: 2vw;
+    }
+    .gitem:nth-child(3) #imageinfo>h4 {
+        text-overflow: initial;
+        font-size: 5vw;
+        white-space: wrap; 
+    }
+    #imageinfo #icons h4 i{
+        font-size: 7vw;
+        padding: 1.5vw 1.5vw;
+        border-radius: 4vw;
+    }
+    #page2 #browse{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #page2 #browse button{
+        padding: 1.1vw 2vw;
+        font-size: 4.5vw;
+        border-radius: 5vw;
+    }
+    #page3{
+        height: 80%;
+       
+        padding: 5vw 2vw;
+        gap: 5vw;
+    }
+    #page3 h1{
+         font-size: 12.2vw;
+         text-align: center;
+         width: 100%;
+         line-height: 12.2vw;
+    }
+    #page3 h3{
+        font-size: 5.5vw;
+        width: 80%;
+        line-height: 6vw;
+    }
+    #page3 #buttons{
+        flex-direction: column;
+        gap: 5vw;
+        margin-bottom: 5vw;
+    }
+    #page3 #buttons button{
+        padding: 2.5vw 3vw;
+        border-radius: 6vw;
+        font-size: 5vw;
+      
+    }
+    #page3 #buttons button:nth-child(2){
+        background-color: white;
+        color: black;
+    }
+    
+    #page3 h4{
+        font-size: 6.5vw;
+        font-weight: 300;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5vw;
+        text-align: center;
+    }
+    #page3 h4 span{
+        font-weight: 400;
+        cursor: pointer;
+        text-decoration: underline;
+    }
+    footer{
+        height: 40%;
+        width: 100%;
+        padding: 1vw 2vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 15vw;
+        
+        
+    }
+    footer #upper{
+        display: flex;
+        padding: 0 6vw;
+        flex-direction: column;
+        gap: 2vw;
+        justify-content: center;
+        align-items: center;
+    }
+    footer svg{
+        width: 100px;
+    }
+    footer #centertext{
+        display: flex;
+        width: 90%;
+        flex-wrap: wrap;
+        gap: 2.5vw;
+        text-align: center;
+        
+    }
+    #centertext h4{
+        font-size: 4vw;
+        font-weight: 400;
+    }
+    #upper #icons{
+        display: flex;
+        gap: 2vw;
+        font-size: 7vw;
+    }
+   
+    footer #lower{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 0 5vw;
+        flex-direction: column;
+        gap: 2vw;
+    }
+    footer #lower #righttext,#lefttext{
+        display: flex;
+        gap: 1.5vw;
+    
+    
+    }
+    footer #lower #righttext h4 ,#lefttext h4{
+        font-size: 4vw;
+        font-weight: 300;
+    }
 }
